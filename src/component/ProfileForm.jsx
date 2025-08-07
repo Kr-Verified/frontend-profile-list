@@ -33,10 +33,17 @@ export default function ProfileForm({ profileList, setProfileList }) {
     }else if (!image1.current.checked && !image2.current.checked) {
       alert("이미지를 선택해주세요.");
     }else {
-      const formData = new FormData(formRef.current);
+      const formDataObj = {
+        name: name.current.value,
+        team: team.current.value,
+        job: job.current.value,
+        tel: phone.current.value,
+        email: email.current.value,
+        imgUrl: image1.current.checked ? "/assets/PARADOX_reverse.png" : "/assets/PARADOX_default.png"
+      };
       setProfileList([
         ...profileList,
-        formData,
+        formDataObj,
       ]);
       return navigate('/ProfileList');
     }
