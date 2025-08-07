@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import textList from './pages/Home.jsx';
 import ProfileLayout from './pages/ProfileLayout.jsx';
+import ProfileModify from './component/ProfileModify.jsx';
 
 function App() {
   const [profileList, setProfileList] = useState([{
@@ -31,6 +32,7 @@ function App() {
         <Route path="/ProfileLayout" element={<ProfileLayout/>}>
           <Route path="ProfileForm" element={<ProfileForm profileList={profileList} setProfileList={setProfileList} />} />
           <Route path="ProfileList" element={<ProfileList profileList={profileList} setProfileList={setProfileList} />} />
+          <Route path="ProfileModify/:id" element={<ProfileModify profileList={profileList} setProfileList={setProfileList} />} />
         </Route>
       </Routes>
     </BrowserRouter>
