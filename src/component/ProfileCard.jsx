@@ -17,7 +17,7 @@ export default function ProfileCard({ profileList, setProfileList, profile, inde
   }
 
   const editProfile = (index) => {
-    navigator(`/ProfileLayout/ProfileModify/${index}`);
+    navigator(`/Profile/ProfileModify/${index}`);
   }
 
   return (

@@ -29,7 +29,7 @@ function App() {
             <li key={index}>{text}</li>
           ))}
         </ul></div>} />
-        <Route path="/ProfileLayout" element={<ProfileLayout/>}>
+        <Route path="/Profile" element={<ProfileLayout/>}>
           <Route path="ProfileForm" element={<ProfileForm profileList={profileList} setProfileList={setProfileList} />} />
           <Route path="ProfileList" element={<ProfileList profileList={profileList} setProfileList={setProfileList} />} />
           <Route path="ProfileModify/:id" element={<ProfileModify profileList={profileList} setProfileList={setProfileList} />} />

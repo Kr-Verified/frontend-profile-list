@@ -1,5 +1,5 @@
-import { use, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProfileForm({ profileList, setProfileList }) {
   const formRef = useRef(null);
@@ -45,12 +45,12 @@ export default function ProfileForm({ profileList, setProfileList }) {
         ...profileList,
         formDataObj,
       ]);
-      return navigate('/ProfileLayout/ProfileList');
+      return navigate('/Profile/ProfileList');
     }
   };
 
   return (
-    <form ref={formRef} onSubmit={submitHandler} actions="./profileLayout">
+    <form ref={formRef} onSubmit={submitHandler}>
       <div>
         <h1>프로필 카드 만들기</h1>
         <div>
