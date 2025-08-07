@@ -6,7 +6,7 @@ export default function ProfileForm({ profileList, setProfileList }) {
   const name = useRef(null);
   const team = useRef(null);
   const job = useRef(null);
-  const phone = useRef(null);
+  const tel = useRef(null);
   const email = useRef(null);
   const image1 = useRef(null);
   const image2 = useRef(null);
@@ -24,16 +24,16 @@ export default function ProfileForm({ profileList, setProfileList }) {
     }else if (!job.current.value) {
       alert("직책을 입력해주세요.");
       job.current.focus();
-    }else if (!phone.current.value) {
+    }else if (!tel.current.value) {
       alert("전화번호를 입력해주세요.");
-      phone.current.focus();
+      tel.current.focus();
     }else if (!email.current.value) {
       alert("이메일을 입력해주세요.");
       email.current.focus();
     }else if (!image1.current.checked && !image2.current.checked) {
       alert("이미지를 선택해주세요.");
     }else {
-      const formDataObj = {
+      const formDataObject = {
         name: name.current.value,
         team: team.current.value,
         job: job.current.value,
@@ -43,7 +43,7 @@ export default function ProfileForm({ profileList, setProfileList }) {
       };
       setProfileList([
         ...profileList,
-        formDataObj,
+        formDataObject,
       ]);
       return navigate('/Profile/ProfileList');
     }
@@ -58,7 +58,7 @@ export default function ProfileForm({ profileList, setProfileList }) {
           <p>Name <input type="text" placeholder="ex) 신은총" name="name" ref={name}></input></p>
           <p>Team <input type="text" placeholder="ex) PARADOX" name="team" ref={team}></input></p>
           <p>Job <input type="text" placeholder="ex) Full Stack Developer" name="job" ref={job}></input></p>
-          <p>Phone <input type="text" placeholder="ex) 010-1234-5678" name="phone" ref={phone}></input></p>
+          <p>Phone <input type="text" placeholder="ex) 010-1234-5678" name="tel" ref={tel}></input></p>
           <p>Email <input type="text" placeholder="ex) example@example.com" name="email" ref={email}></input></p>
           <p>Image <input type="radio" name="imgUrl" value="/assets/PARADOX_default.png" id="Default" ref={image1}></input><label htmlFor="Default">Default</label>
           <input type="radio" name="imgUrl" value="/assets/PARADOX_reverse.png" id="Reverse" ref={image2}></input><label htmlFor="Reverse">Reverse</label></p>
