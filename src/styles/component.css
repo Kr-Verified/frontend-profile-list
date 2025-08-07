@@ -1,0 +1,71 @@
+#header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header header {
+  color: white;
+}
+
+#header nav {
+  background-color: rgb(220, 220, 220);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#header a {
+  margin: 0 25px 0 25px;
+  color: black;
+  text-decoration: none;
+}
+
+#profileForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#profileForm .form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#profileForm .create-div {
+  margin: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 253, 221);
+  border-radius: 50px;
+  height: 90%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+#profileForm p {
+ display: flex;
+ justify-content: space-between;
+ font-weight: bold;
+}
+
+#profileForm label {
+  font-weight: normal;
+}
+
+#profileForm input {
+  width: 80%;
+}
+
+#profileForm button {
+  height: 75px;
+  background-color: rgb(72, 218, 36);
+  border-radius: 20px;
+  font-weight: bold;
+}

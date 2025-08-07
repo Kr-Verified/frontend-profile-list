@@ -50,10 +50,10 @@ export default function ProfileForm({ profileList, setProfileList }) {
   };
 
   return (
-    <form ref={formRef} onSubmit={submitHandler}>
-      <div>
+    <form ref={formRef} onSubmit={submitHandler} id="profileForm">
+      <div className="form">
         <h1>프로필 카드 만들기</h1>
-        <div>
+        <div className="create-div">
           <h2>정보를 입력해주세요.</h2>
           <p>Name <input type="text" placeholder="ex) 신은총" name="name" ref={name}></input></p>
           <p>Team <input type="text" placeholder="ex) PARADOX" name="team" ref={team}></input></p>

@@ -53,17 +53,16 @@ export default function ProfileModify({ profileList, setProfileList }) {
   };
 
   return (
-    <form ref={formRef} onSubmit={submitHandler}>
-      <div>
+    <form ref={formRef} onSubmit={submitHandler} id="profileForm">
+      <div className="form">
         <h1>프로필 카드 만들기</h1>
-        <div>
+        <div className="create-div">
           <h2>정보를 입력해주세요.</h2>
           <p>Name <input type="text" placeholder="ex) 신은총" name="name" ref={name} defaultValue={targetProfile.name}></input></p>
           <p>Team <input type="text" placeholder="ex) PARADOX" name="team" ref={team} defaultValue={targetProfile.team}></input></p>
           <p>Job <input type="text" placeholder="ex) Full Stack Developer" name="job" ref={job} defaultValue={targetProfile.job}></input></p>
           <p>Phone <input type="text" placeholder="ex) 010-1234-5678" name="tel" ref={tel} defaultValue={targetProfile.tel}></input></p>
           <p>Email <input type="text" placeholder="ex) example@example.com" name="email" ref={email} defaultValue={targetProfile.email}></input></p>
-          {console.log(targetProfile.imgUrl)}
           <p>Image <input type="radio" name="imgUrl" value="/assets/PARADOX_default.png" id="Default" ref={image1} defaultChecked={targetProfile.imgUrl === "./assets/PARADOX_default.png"}></input><label htmlFor="Default">Default</label>
           <input type="radio" name="imgUrl" value="/assets/PARADOX_reverse.png" id="Reverse" ref={image2} defaultChecked={targetProfile.imgUrl === "./assets/PARADOX_reverse.png"}></input><label htmlFor="Reverse">Reverse</label></p>
           <button type="submit" onClick={submitHandler}>수정완료</button>
