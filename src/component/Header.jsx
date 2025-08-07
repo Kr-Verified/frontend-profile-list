@@ -8,8 +8,8 @@ export default function Header() {
       </header>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/ProfileList">Card List</Link>
-        <Link to="/ProfileForm">Make Card</Link>
+        <Link to="/ProfileLayout/ProfileList">Card List</Link>
+        <Link to="/ProfileLayout/ProfileForm">Make Card</Link>
       </nav>
     </>
   )

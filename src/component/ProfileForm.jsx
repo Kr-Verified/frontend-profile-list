@@ -45,7 +45,7 @@ export default function ProfileForm({ profileList, setProfileList }) {
         ...profileList,
         formDataObj,
       ]);
-      return navigate('/ProfileList');
+      return navigate('/ProfileLayout/ProfileList');
     }
   };
 

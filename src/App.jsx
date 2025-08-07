@@ -3,7 +3,8 @@ import ProfileForm from './component/ProfileForm.jsx';
 import ProfileList from './component/ProfileList.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-
+import textList from './pages/Home.jsx';
+import ProfileLayout from './pages/ProfileLayout.jsx';
 
 function App() {
   const [profileList, setProfileList] = useState([{
@@ -20,8 +21,17 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/ProfileForm" element={<ProfileForm profileList={profileList} setProfileList={setProfileList} />} />
-        <Route path="/ProfileList" element={<ProfileList profileList={profileList} setProfileList={setProfileList} />} />
+        <Route path="/" element={<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh'}}>
+          <h1 >프로필 카드 리스트 만들기</h1>
+          <ul style={{padding: '10px', width: '97%'}}>
+          {textList.map((text, index) => (
+            <li key={index}>{text}</li>
+          ))}
+        </ul></div>} />
+        <Route path="/ProfileLayout" element={<ProfileLayout/>}>
+          <Route path="ProfileForm" element={<ProfileForm profileList={profileList} setProfileList={setProfileList} />} />
+          <Route path="ProfileList" element={<ProfileList profileList={profileList} setProfileList={setProfileList} />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
