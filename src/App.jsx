@@ -15,7 +15,7 @@ function App() {
     id: 1,
     name: "신은총",
     team: "PARADOX",
-    imgUrl: "./assets/PARADOX_reverse.png",
+    imgUrl: "/assets/PARADOX_default.png",
     job: "Paradox-Intern",
     tel: "010-1234-5678",
     email: "paradox@gmail.com",
