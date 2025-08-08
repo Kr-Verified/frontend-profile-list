@@ -63,8 +63,8 @@ export default function ProfileModify({ profileList, setProfileList }) {
           <p>Job <input type="text" placeholder="ex) Full Stack Developer" name="job" ref={job} defaultValue={targetProfile.job}></input></p>
           <p>Phone <input type="text" placeholder="ex) 010-1234-5678" name="tel" ref={tel} defaultValue={targetProfile.tel}></input></p>
           <p>Email <input type="text" placeholder="ex) example@example.com" name="email" ref={email} defaultValue={targetProfile.email}></input></p>
-          <p>Image <input type="radio" name="imgUrl" value="/assets/PARADOX_default.png" id="Default" ref={image1} defaultChecked={targetProfile.imgUrl === "./assets/PARADOX_default.png"}></input><label htmlFor="Default">Default</label>
-          <input type="radio" name="imgUrl" value="/assets/PARADOX_reverse.png" id="Reverse" ref={image2} defaultChecked={targetProfile.imgUrl === "./assets/PARADOX_reverse.png"}></input><label htmlFor="Reverse">Reverse</label></p>
+          <p>Image <input type="radio" name="imgUrl" value="/assets/PARADOX_default.png" id="Default" ref={image1} defaultChecked={targetProfile.imgUrl === "/assets/PARADOX_default.png"}></input><label htmlFor="Default">Default</label>
+          <input type="radio" name="imgUrl" value="/assets/PARADOX_reverse.png" id="Reverse" ref={image2} defaultChecked={targetProfile.imgUrl === "/assets/PARADOX_reverse.png"}></input><label htmlFor="Reverse">Reverse</label></p>
           <button type="submit" onClick={submitHandler}>수정완료</button>
         </div>
       </div>
