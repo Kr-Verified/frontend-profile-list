@@ -37,7 +37,7 @@ export default function ProfileForm({ profileList, setProfileList }) {
         name: name.current.value,
         team: team.current.value,
         job: job.current.value,
-        tel: phone.current.value,
+        tel: tel.current.value,
         email: email.current.value,
         imgUrl: image1.current.checked ? "/assets/PARADOX_reverse.png" : "/assets/PARADOX_default.png"
       };
