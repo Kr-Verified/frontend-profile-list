@@ -43,7 +43,7 @@ export default function ProfileModify({ profileList, setProfileList }) {
         job: job.current.value,
         tel: tel.current.value,
         email: email.current.value,
-        imgUrl: image1.current.checked ? "/assets/PARADOX_reverse.png" : "/assets/PARADOX_default.png"
+        imgUrl: image1.current.checked ? "/assets/PARADOX_default.png" : "/assets/PARADOX_reverse.png"
       };
       const temp = [...profileList];
       temp[id] = formDataObject;
